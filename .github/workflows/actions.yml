@@ -15,8 +15,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
+  # This workflow contains a single job called "Publish Report"
+  publish-report:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -26,10 +26,9 @@ jobs:
       - uses: actions/checkout@v2
 
       # Run Newman htmlextra image
-      - name: Run a multi-line script
+      - name: Build the project
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          echo Start to build,
           docker container run -t -v $(pwd):/etc/newman dannydainton/htmlextra \
           run 'jornadacolaborativa.postman_collection.json' \
           -k \
@@ -39,5 +38,11 @@ jobs:
           --reporter-htmlextra-title "Jornada Colaborativa - Nomes Mais Comuns No Brasil"
 
       # Show the directory and list its contents
-      - name: Run a single-line script
+      - name: List workdir
         run:  ls -lathr
+
+      - name: Publish Report
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: .
