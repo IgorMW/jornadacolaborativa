@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "8456b4f3-c6e5-43de-a81e-53825d5b2ec9",
+		"name": "Jornada Colaborativa",
+		"description": "PoC para testar retorno de API do IBGE com alguns testes utilizando Newman e Github.\nEndereço para consumir a API: https://servicodados.ibge.gov.br/api/docs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ranking Names IBGE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {",
+							"  pm.expect(pm.response.code).to.eql(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 9000ms\", () => {",
+							"  pm.expect(pm.response.responseTime).to.be.below(9000);",
+							"});",
+							"",
+							"pm.test(\"Check body if ranking until 20\", () => {",
+							"  const responseJson = pm.response.json();",
+							"  pm.expect(responseJson[0].res[19].ranking).to.eql(20);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking",
+					"protocol": "https",
+					"host": [
+						"servicodados",
+						"ibge",
+						"gov",
+						"br"
+					],
+					"path": [
+						"api",
+						"v2",
+						"censos",
+						"nomes",
+						"ranking"
+					]
+				},
+				"description": "Show the 20 most common names in Brazil."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
