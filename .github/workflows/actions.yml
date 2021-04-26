@@ -39,11 +39,11 @@ jobs:
 
       # Show the directory and list its contents
       - name: List workdir
-        run:  ls -lathr
+        run:  ls -lathr ./docs
 
       # Publish report on the github pages
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: .
