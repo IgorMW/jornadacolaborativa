@@ -3,7 +3,7 @@
 ## PoC para testar retorno de API do IBGE com alguns testes utilizando Newman, Github Actions e Github Pages.  
   
 
-### O [endpoint](https://servicodados.ibge.gov.br/api/docs/nomes?versao=2){:target="_blank"} escolhido retorna os 20 nomes mais comuns no Brasil. Cujo o retorno possui o seguinte padrão:
+### O [endpoint](https://servicodados.ibge.gov.br/api/docs/nomes?versao=2) escolhido retorna os 20 nomes mais comuns no Brasil. Cujo o retorno possui o seguinte padrão:
 ```
 [
     {
@@ -25,7 +25,7 @@
 - Resposta menor que 10 segundos
 - Ter no corpo da resposta o vigésimo nome  
   
-### A criação do relatório é realizada utilizando a imagem [dannydainton/htmlextra](https://github.com/DannyDainton/newman-reporter-htmlextra){:target="_blank"}. 
+### A criação do relatório é realizada utilizando a imagem [dannydainton/htmlextra](https://github.com/DannyDainton/newman-reporter-htmlextra). 
   
 ```console
           docker container run -t -v $(pwd):/etc/newman dannydainton/htmlextra \
@@ -37,7 +37,7 @@
           --reporter-htmlextra-title "Jornada Colaborativa - Nomes Mais Comuns No Brasil"
 ```  
   
-### Etapa de publicação no GitHub Pages. Utilizamos o [GitHub Pages Action](https://github.com/marketplace/actions/github-pages-action){:target="_blank"} para isso.
+### Etapa de publicação no GitHub Pages. Utilizamos o [GitHub Pages Action](https://github.com/marketplace/actions/github-pages-action) para isso.
 ```console
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3
