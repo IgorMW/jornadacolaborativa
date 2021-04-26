@@ -45,6 +45,5 @@ jobs:
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3
         with:
-          publish_dir: ./docs
-        env:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./docs
