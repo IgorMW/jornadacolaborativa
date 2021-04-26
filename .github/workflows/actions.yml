@@ -39,4 +39,5 @@ jobs:
           --reporter-htmlextra-title "Jornada Colaborativa - Nomes Mais Comuns No Brasil"
 
       # Show the directory and list its contents
+      - name: Run a single-line script
         run:  ls -lathr
