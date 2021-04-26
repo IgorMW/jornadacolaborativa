@@ -33,7 +33,7 @@ jobs:
           run 'jornadacolaborativa.postman_collection.json' \
           -k \
           -r cli,htmlextra \
-          --reporter-htmlextra-export /etc/newman/index.html \
+          --reporter-htmlextra-export /etc/newman/docs/index.html \
           --reporter-htmlextra-browserTitle "Jornada Colaborativa" \
           --reporter-htmlextra-title "Jornada Colaborativa - Nomes Mais Comuns No Brasil"
 
