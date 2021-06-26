@@ -21,7 +21,7 @@
 ```  
   
 ### São realizados 3 testes básicos na resposta recebida:
-- Código de resposta igual a a 200
+- Código de resposta igual a http 200
 - Resposta menor que 10 segundos
 - Ter no corpo da resposta o vigésimo nome  
   
