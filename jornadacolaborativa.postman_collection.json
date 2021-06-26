@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "8456b4f3-c6e5-43de-a81e-53825d5b2ec9",
 		"name": "Jornada Colaborativa",
-		"description": "PoC para testar retorno de API do IBGE com alguns testes utilizando Newman e Github.\nEndereço para consumir a API: https://servicodados.ibge.gov.br/api/docs",
+		"description": "PoC para testar retorno de API do IBGE com algumas validações utilizando Newman e Github.\nEndereço para consumir a API: https://servicodados.ibge.gov.br/api/docs",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
