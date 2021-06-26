@@ -1,6 +1,6 @@
 # PoC Jornada Colaborativa
   
-## PoC para testar retorno de API do IBGE com alguns testes utilizando Newman, Github Actions e Github Pages.  
+## PoC para testar retorno de API do IBGE com algumas validações utilizando Newman, Github Actions e Github Pages.  
   
 
 ### O [endpoint](https://servicodados.ibge.gov.br/api/docs/nomes?versao=2) escolhido retorna os 20 nomes mais comuns no Brasil. Cujo o retorno possui o seguinte padrão:
